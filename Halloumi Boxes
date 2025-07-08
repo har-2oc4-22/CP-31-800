@@ -1,1 +1,36 @@
 
+#include<bits/stdc++.h>
+using namespace std; 
+#define ff first
+#define ss second
+#define all(x) (x).begin(), (x).end()
+typedef long long ll;
+typedef unsigned long long ull;
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin>>t;
+    while(t--){
+        int n,k;
+        cin>>n>>k;
+        vector<int>vec(n);
+        for(int i =0;i<n;i++){
+            cin>>vec[i];
+           }
+          vector<int>copy=vec;
+         sort(copy.begin(),copy.end());
+            if(copy==vec||k>1){
+                cout<<"YES"<<endl;
+            }
+            else{
+                cout<<"NO"<<endl;
+            }
+         
+
+    }
+    
+}
