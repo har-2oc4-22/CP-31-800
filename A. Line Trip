@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std; 
+#define ff first
+#define ss second
+#define all(x) (x).begin(), (x).end()
+typedef long long ll;
+typedef unsigned long long ull;
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int t;
+    cin>>t;
+    while(t--){
+        ll n,x;
+        cin>>n>>x;
+        vector<ll>vec;
+        vec.push_back(0);
+        for(int i =0;i<n;i++){
+        ll points;
+        cin>>points;
+        vec.push_back(points);
+         }
+         vec.push_back(x);
+         n= vec.size();
+        ll max_points_between_dist = INT_MIN;
+        for(int i =1;i<n;i++){
+            if(i==n-1){
+            max_points_between_dist= max(max_points_between_dist , 2*(vec[i] - vec[i-1]));
+            }
+            else{
+                 max_points_between_dist = max(max_points_between_dist , vec[i]- vec[i-1]);
+            }
+        
+        }
+          cout<<max_points_between_dist<<endl;
+
+    }
+
+}
